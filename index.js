@@ -5,7 +5,7 @@ const generateHTMlcode = (getdata) =>{
   return  ` <div class="col-lg-4 col-md-6 my-4" id=${getdata.id}>
   <div class="card ">
     <div class="card-header d-flex justify-content-end gap-2">
-      <button class="btn btn-outline-danger" name="${getdata.id} onclick="deleteCard.apply(this, arguments)"><i class="fas fa-trash-alt" name="${getdata.id}"></i></button>
+      <button class="btn btn-outline-danger" name="${getdata.id}" onclick="deleteCard.apply(this, arguments)"><i class="fas fa-trash-alt" name="${getdata.id}"></i></button>
       <button class="btn btn-outline-info"><i class="fas fa-pencil-alt"></i></button>    
     </div>
     <div class="card-body ">
@@ -82,7 +82,7 @@ const deleteCard = (event) => {
   globalstorage = removeTask;
 
   saveToLocalStorage();
-
+ 
   // access DOM to remove card
   if (elementType === "BUTTON") {
     return taskContainer.removeChild(
@@ -95,4 +95,3 @@ const deleteCard = (event) => {
   }
   
 };
-console.log(globalstorage);
